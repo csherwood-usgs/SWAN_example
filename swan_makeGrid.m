@@ -87,8 +87,8 @@ C.X = Gc.X;
 C.Y = Gc.Y;
 C.Z = -zc % in SWAN, depths are positive
 % I changed the name to prevent overwriting the files I know worked
-swan_writeBot(C, 'Sand200x200_v1_check')
-swan_writeGrid(C,'Sand200x200_v1_check')
+swan_writeBot(C, 'Sand200x200_v1')
+swan_writeGrid(C,'Sand200x200_v1')
 %% Plot the bathymetry to check
 figure(2);clf
 pcolorjw(C.X,C.Y,-C.Z)
