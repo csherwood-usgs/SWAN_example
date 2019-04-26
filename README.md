@@ -9,7 +9,7 @@ These draw on some utility scripts written by Dave Thompson (USGS, St. Petersbur
 #### Make a grid
 `swan_makeGrid.m` - Do the math to determine grid point locations and write the grids.
 
-This code works in *x,y* coordinates (e.g., UTM) and makes a rectangular grid with an orgin at *xpc, ypc* at some angle *alp* with size *xlenc, ylenc* and spacing *dxc, dy*. After specifying this, the grid size is *mxy* by *myc* grid points. Pro hint: don't make a square grid with *mxc = myc*....it is easier to track the orientation of a rectangular grid. You may need to iterate with figure showing your bathymetry input until you get the grid located and oriented correctly.
+This code works in *x,y* coordinates (e.g., UTM) and makes a rectangular grid with an orgin at *xpc, ypc* at some angle *alp* with size *xlenc, ylenc* and spacing *dxc, dy*. After specifying this, the grid size is *mxy* by *myc* grid points. Note: this is the number of grid points...the number of "meshes", which is the number SWAN wants in the CGRID command (unfortunately also called *mxc* and *myc*), is one smaller than this. Pro hint: don't make a square grid with *mxc = myc*....it is easier to track the orientation of a rectangular grid. You may need to iterate with a figure showing your shoreline or bathymetry input until you get the grid located and oriented correctly.
 
 This code does not do the interpolation of bathymetry to the grid points. You can do that externally with e.g. Surfer, GlobalMapper, QGIS, or ArcGIS....or you can import the bathy to Matlab and use griddata.
 
